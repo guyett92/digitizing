@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, List } from "reactstrap";
 const FeatureBox = (props) => {
   return (
     <>
@@ -31,8 +31,18 @@ const FeatureBox = (props) => {
                   {feature.title}
                 </h5>
                 <p className="text-muted mb-3 f-15">{feature.desc}</p>
+                <h6 className="text-dark font-weight-normal mb-3 pt-3">
+                  Development Highlights
+                </h6>
+                <List>
+                  {feature.highlights.map((highlight, key) => (
+                    <li className="text-muted" key={key}>
+                      {highlight}
+                    </li>
+                  ))}
+                </List>
                 <a href={feature.link} className="f-16 text-warning">
-                  Read More <span className="right-icon ml-2">&#8594;</span>
+                  Learn More <span className="right-icon ml-2">&#8594;</span>
                 </a>
               </div>
             </Col>
@@ -48,8 +58,18 @@ const FeatureBox = (props) => {
                   {feature.title}
                 </h5>
                 <p className="text-muted mb-3 f-15">{feature.desc}</p>
+                <h6 className="text-dark font-weight-normal mb-3 pt-3">
+                  Development Highlights
+                </h6>
+                <List>
+                  {feature.highlights.map((highlight, key) => (
+                    <li className="text-muted" key={key}>
+                      {highlight}
+                    </li>
+                  ))}
+                </List>
                 <a href={feature.link} className="f-16 text-warning">
-                  Read More <span className="right-icon ml-2">&#8594;</span>
+                  Learn More <span className="right-icon ml-2">&#8594;</span>
                 </a>
               </div>
             </Col>
@@ -73,23 +93,37 @@ const Projects = () => {
     {
       id: 1,
       img: "./images/45.png",
-      title: "LOREM IPSUM",
-      desc: "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      link: "/",
+      title: "Monsters Bash",
+      desc: "A generative art collection featuring 10,000 unique combinations of the world’s favorite classic monsters. Each hand drawn asset animates as it transitions between its human and monster identities.",
+      highlights: [
+        "Programmatic generation allowing for over a quintillion combinations of traits",
+        "Blockchain smart contract development",
+      ],
+      link: "https://monstersbash.io/",
     },
     {
       id: 2,
       img: "./images/Group Members.png",
-      title: "LOREM IPSUM",
-      desc: "Sed perspiciatis unde omnis natus error voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo excepturi sint occaecati cupiditate architecto.",
-      link: "/",
+      title: "Meta Champs",
+      desc: "A collectible sports club offering a 3D and fully interactive NFT as it’s initial membership ticket. Each jersey awards the owner with special access to future drops, SWAG and perks.",
+      highlights: [
+        "AR/VR ready GLB file coded to be interactively spun 360 degrees by the viewer",
+        "More blockchain contract development",
+      ],
+      link: "https://www.metachamps.xyz/",
     },
     {
       id: 3,
       img: "./images/45.png",
-      title: "LOREM IPSUM",
-      desc: "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      link: "/",
+      title: "Poopy Exp",
+      desc: "The first programmatically generated interactive ERC-721 NFT. Each poopy contains an arcade style game within the NFT who’s attributes (like difficulty rating and map layout) are uniquely generated when minted.",
+      highlights: [
+        "Programmatic generation",
+        "Interactive reveal allowing user to uncover their design for the first time - a first for NFT collections",
+        "One of a kind generated arcade style game contained within the NFT",
+        "Even more blockchain smart contract development",
+      ],
+      link: "https://www.poopyexperiences.io/",
     },
   ];
   return (
