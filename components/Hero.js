@@ -17,7 +17,7 @@ const Hero = () => {
                 Technology solutions that allow creatives, artists and
                 businesses to achieve their vision on the blockchain.
               </p>
-              <a href="#contact" className="btn btn-warning">
+              <a href="#contact" className="btn btn-info">
                 Contact Now <span className="ml-2 right-icon">&#8594;</span>
               </a>
             </div>

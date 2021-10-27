@@ -8,11 +8,16 @@ const About = () => {
           <Col lg={6} md={8}>
             <div className="title text-center mb-5">
               <h3 className="font-weight-normal text-dark">
-                About <span className="text-warning">Us</span>
+                About <span className="text-info">Us</span>
               </h3>
               <p className="text-muted">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
+                Digitizing Inc is a full-service blockchain development team
+                with offices in New York. Founded in 2021 by longtime crypto
+                enthusiasts, traders and nft collectors, the company is a
+                creative collaboration between experienced developers and
+                longtime friends. Their mission is to further the artistic and
+                innovative endeavors the blockchain has inspired by providing
+                technology solutions to all those with a vision.
               </p>
             </div>
           </Col>
