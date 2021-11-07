@@ -35,7 +35,7 @@ const Service = () => {
           <Col lg={6} md={8}>
             <div className="title text-center mb-5">
               <h3 className="font-weight-normal text-dark">
-                <span className="text-warning">Services</span>
+                <span className="dblue">Services</span>
               </h3>
               <p className="text-muted">
                 Lorem Ipsum has been the industry's standard dummy text ever

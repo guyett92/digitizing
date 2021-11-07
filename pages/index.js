@@ -9,12 +9,12 @@ import Contact from "../components/Contact";
 
 const Index = () => {
   return (
-    <Layout pageTitle="Landing Page Nextjs">
+    <Layout pageTitle="Digitzing Inc">
       <Header />
       <Hero />
       <Projects />
       <About />
-      {/* <Service /> */}
+      <Service />
       <Contact />
       <Footer />
     </Layout>

@@ -31,10 +31,12 @@ const Header = () => {
     <div className={`header${sticky ? " sticky" : ""}`}>
       <Navbar light expand="md">
         <Container>
-          <NavbarBrand href="/">LOGO</NavbarBrand>
+          <NavbarBrand href="/">
+            <img src="/images/logo.png" width={200} alt="logo" />
+          </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="m-auto" navbar>
+            <Nav className="ms-auto" navbar>
               <NavItem>
                 <NavLink href="#projects">Projects</NavLink>
               </NavItem>

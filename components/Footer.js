@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
+import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
+
 const Footer = () => {
   const links = [
     {
@@ -11,15 +13,6 @@ const Footer = () => {
         { title: "Poopy Exp", link: "https://www.poopyexperiences.io/" },
       ],
     },
-    {
-      id: 2,
-      title: "About Us",
-      child: [
-        { title: "Contact Us", link: "/" },
-        { title: "FAQs", link: "/" },
-        { title: "Privacy Policy", link: "/" },
-      ],
-    },
   ];
 
   return (
@@ -28,8 +21,14 @@ const Footer = () => {
         <Row>
           <Col lg={4}>
             <div className="mb-4">
-              <p className="text-muted mt-4 mb-2">email@email.com</p>
-              <h6 className="text-muted font-weight-normal">+99 1234-5678-9</h6>
+              <a
+                href="mailto:tipeake@gmail.com"
+                className="text-dark mt-4 mb-2"
+              >
+                tipeake@gmail.com.com
+              </a>
+              <br />
+              {/* <h6 className="text-muted font-weight-normal">+99 1234-5678-9</h6> */}
             </div>
           </Col>
           <Col lg={8}>
@@ -52,20 +51,29 @@ const Footer = () => {
                 <ul className="list-unstyled footer-social-list mt-4">
                   <li className="list-inline-item">
                     <a href="#">
-                      <i className="mdi mdi-facebook"></i>
+                      <BsInstagram />
                     </a>
                   </li>
                   <li className="list-inline-item">
                     <a href="#">
-                      <i className="mdi mdi-instagram"></i>
+                      <BsTwitter />
                     </a>
                   </li>
                   <li className="list-inline-item">
                     <a href="#">
-                      <i className="mdi mdi-linkedin"></i>
+                      <BsFacebook />
                     </a>
                   </li>
                 </ul>
+              </Col>
+              <Col md={4}>
+                <div className="image-container">
+                  <img
+                    src="/images/digitizing.png"
+                    alt="digitizing logo"
+                    width={100}
+                  />
+                </div>
               </Col>
             </Row>
           </Col>

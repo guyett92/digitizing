@@ -4,9 +4,9 @@ import { Input, Button, Container } from "reactstrap";
 
 const Contact = () => {
   return (
-    <section className="section" id="contact">
+    <section className="contact-section" id="contact">
       <Container>
-        <h3 className="font-weight-normal text-dark">Contact</h3>
+        <h3 className="font-weight-normal dblue">Contact</h3>
         <Formik
           initialValues={{
             name: "",
@@ -60,7 +60,9 @@ const Contact = () => {
               render={(msg) => <div className="text-danger">{msg}</div>}
             />
             <br />
-            <Button type="submit">Send</Button>
+            <Button className="btn btn-info" type="submit">
+              Send
+            </Button>
           </Form>
         </Formik>
       </Container>
