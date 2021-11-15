@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
-
+import { BsTwitter, BsGithub } from "react-icons/bs";
+import { FaDiscord } from "react-icons/fa";
 const Footer = () => {
   const links = [
     {
@@ -50,18 +50,18 @@ const Footer = () => {
                 <h6 className="text-dark mb-3">Socials</h6>
                 <ul className="list-unstyled footer-social-list mt-4">
                   <li className="list-inline-item">
+                    <li className="list-inline-item">
+                      <a href="#">
+                        <BsTwitter />
+                      </a>
+                    </li>
                     <a href="#">
-                      <BsInstagram />
+                      <BsGithub />
                     </a>
                   </li>
                   <li className="list-inline-item">
                     <a href="#">
-                      <BsTwitter />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="#">
-                      <BsFacebook />
+                      <FaDiscord />
                     </a>
                   </li>
                 </ul>

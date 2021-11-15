@@ -8,11 +8,6 @@ body {
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
   overflow-x: hidden;
-  background: linear-gradient(
-    to bottom right,
-    rgb(104, 41, 111, 0.2),
-    rgb(30, 94, 122, 0.2)
-  );
 }
 
 a {
@@ -65,14 +60,6 @@ a {
   position: relative;
 }
 
-.special {
-  padding-top: 600px;
-  background-image: url("/images/banner.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
 .btn-info {
   background-color: var(--dblue);
   color: #fff;
@@ -108,11 +95,7 @@ a {
   font-weight: bold;
 }
 
-.hero {
-}
-
 .new-card {
-  background-color: rgb(255, 255, 255, 0.75);
   padding: 10px;
   border-radius: 10px;
 }
@@ -131,4 +114,12 @@ a {
   max-width: 40rem;
   background-color: rgb(255, 255, 255, 0.75);
   border-radius: 10px;
+}
+
+.new-hover {
+  font-size: 1.2rem;
+}
+
+.new-hover:hover {
+  color: #fcce08 !important;
 }

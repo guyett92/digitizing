@@ -1,31 +1,45 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
+import { BsTwitter, BsGithub } from "react-icons/bs";
+import { FaDiscord } from "react-icons/fa";
+import styles from "../styles/Hero.module.css";
+
 const Hero = () => {
   return (
-    <section className="special-section about-section position-relative hero">
-      <div className="special">
-        <Container>
-          <Row className="align-items-center">
-            <Col lg={6} className="align-self-end">
-              <div className="pr-lg-5 new-card">
-                <p className="text-uppercase dblue font-weight-medium f-14 mb-4">
-                  DIGITAL REVOLUTION
-                </p>
-                <h1 className="mb-4 font-weight-normal dblue line-height-1_4">
-                  DIGITIZING INC
-                </h1>
-                <p className="text-dark mb-4 pb-2">
-                  Technology solutions that allow creatives, artists and
-                  businesses to achieve their vision on the blockchain.
-                </p>
-                <a href="#contact" className="btn btn-info">
-                  Contact Now <span className="ml-2 right-icon">&#8594;</span>
-                </a>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+    <section className={`special-section position-relative ${styles.hero}`}>
+      <Container>
+        <Row className={`align-items-center ${styles.bottomClass}`}>
+          <Col lg={8} className="align-self-end">
+            <div className="pr-lg-5 new-card">
+              <h1 className="mb-4 font-weight-normal text-dark line-height-1_4">
+                digitizing.io
+              </h1>
+              <p className="text-dark fw-bold mb-4 pb-2">
+                Technology solutions that allow creatives, artists,
+                entrepreneurs, and businesses to achieve their vision on the
+                blockchain.
+              </p>
+              {/* <div>
+                <h3 className={styles.socials}>
+                  <BsTwitter />
+                </h3>
+                <h3 className={styles.socials}>
+                  <BsGithub />
+                </h3>
+                <h3 className={styles.socials}>
+                  <FaDiscord />
+                </h3>
+              </div> */}
+              <a
+                href="#contact"
+                className={`btn text-light fw-bold ${styles.gradientBtn}`}
+              >
+                Contact Now <span className="ml-2 right-icon">&#8594;</span>
+              </a>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };

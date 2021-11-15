@@ -32,19 +32,25 @@ const Header = () => {
       <Navbar light expand="md">
         <Container>
           <NavbarBrand href="/">
-            <img src="/images/logo.png" width={200} alt="logo" />
+            <img src="/images/new-logo.png" width={70} alt="logo" />
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ms-auto" navbar>
               <NavItem>
-                <NavLink href="#projects">Projects</NavLink>
+                <NavLink className="text-dark new-hover" href="#projects">
+                  Projects
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#about">About</NavLink>
+                <NavLink className="text-dark new-hover" href="#about">
+                  About
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#contact">Contact</NavLink>
+                <NavLink className="text-dark new-hover" href="#contact">
+                  Contact
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>

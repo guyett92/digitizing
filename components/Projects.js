@@ -4,8 +4,6 @@ const FeatureBox = (props) => {
   const [reorder, setReorder] = useState(false);
 
   const handleResize = () => {
-    console.log(window.innerWidth);
-
     if (window.innerWidth <= 767) {
       setReorder(true);
     } else {
