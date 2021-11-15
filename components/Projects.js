@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, List } from "reactstrap";
+import Zoom from "react-reveal";
+
 const FeatureBox = (props) => {
   const [reorder, setReorder] = useState(false);
 
@@ -19,136 +21,145 @@ const FeatureBox = (props) => {
     <>
       {props.features.map((feature, key) =>
         feature.id % 2 !== 0 ? (
-          <Row
-            key={key}
-            className={`${
-              feature.id === 1
-                ? "align-items-center"
-                : "align-items-center mt-5"
-            }`}
-          >
-            <Col md={5}>
-              <div>
-                <a href={feature.link} target="_blank" rel="noreferrer">
-                  <img
-                    src={feature.img}
-                    alt=""
-                    className="img-fluid shadow rounded d-block mx-auto"
-                    width={393}
-                  />
-                </a>
-              </div>
-            </Col>
-            <Col md={{ size: 6, offset: 1 }}>
-              <div className="mt-5 mt-sm-0 mb-4">
-                <div className="my-4">
-                  <i className={feature.icon}></i>
+          <Zoom left>
+            <Row
+              key={key}
+              className={`${
+                feature.id === 1
+                  ? "align-items-center"
+                  : "align-items-center mt-5"
+              }`}
+            >
+              <Col md={5}>
+                <div>
+                  <a href={feature.link} target="_blank" rel="noreferrer">
+                    <img
+                      src={feature.img}
+                      alt=""
+                      className="img-fluid shadow rounded d-block mx-auto"
+                      width={393}
+                    />
+                  </a>
                 </div>
-                <h5 className="dblue font-weight-normal mb-3 pt-3">
-                  {feature.title}
-                </h5>
-                <p className="text-muted mb-3 f-15">{feature.desc}</p>
-                <h6 className="dblue font-weight-normal mb-3 pt-3">
-                  Development Highlights
-                </h6>
-                <List>
-                  {feature.highlights.map((highlight, key) => (
-                    <li className="text-muted" key={key}>
-                      {highlight}
-                    </li>
-                  ))}
-                </List>
-                <a href={feature.link} className="f-16 dblue dblue-hover bold">
-                  Learn More <span className="right-icon ml-2">&#8594;</span>
-                </a>
-              </div>
-            </Col>
-          </Row>
+              </Col>
+              <Col md={{ size: 6, offset: 1 }}>
+                <div className="mt-5 mt-sm-0 mb-4">
+                  <div className="my-4">
+                    <i className={feature.icon}></i>
+                  </div>
+                  <h5 className="purp fw-bold mb-3 pt-3">{feature.title}</h5>
+                  <p className="text-dark mb-3 f-15">{feature.desc}</p>
+                  <h6 className="lblue fw-bold mb-3 pt-3">
+                    Development Highlights
+                  </h6>
+                  <List>
+                    {feature.highlights.map((highlight, key) => (
+                      <li className="text-dark" key={key}>
+                        {highlight}
+                      </li>
+                    ))}
+                  </List>
+                  <a
+                    href={feature.link}
+                    className="f-16 lblue dblue-hover bold"
+                  >
+                    Learn More <span className="right-icon ml-2">&#8594;</span>
+                  </a>
+                </div>
+              </Col>
+            </Row>
+          </Zoom>
         ) : !reorder ? (
-          <Row key={key} className="align-items-center mt-5">
-            <Col md={6}>
-              <div className="mb-4">
-                <div className="my-4">
-                  <i className="mdi mdi-account-group"></i>
+          <Zoom right>
+            <Row key={key} className="align-items-center mt-5">
+              <Col md={6}>
+                <div className="mb-4">
+                  <div className="my-4">
+                    <i className="mdi mdi-account-group"></i>
+                  </div>
+                  <h5 className="purp fw-bold mb-3 pt-3">{feature.title}</h5>
+                  <p className="text-dark mb-3 f-15">{feature.desc}</p>
+                  <h6 className="lblue fw-bold mb-3 pt-3">
+                    Development Highlights
+                  </h6>
+                  <List>
+                    {feature.highlights.map((highlight, key) => (
+                      <li className="text-dark" key={key}>
+                        {highlight}
+                      </li>
+                    ))}
+                  </List>
+                  <a
+                    href={feature.link}
+                    className="f-16 lblue dblue-hover bold"
+                  >
+                    Learn More <span className="right-icon ml-2">&#8594;</span>
+                  </a>
                 </div>
-                <h5 className="dblue font-weight-normal mb-3 pt-3">
-                  {feature.title}
-                </h5>
-                <p className="text-muted mb-3 f-15">{feature.desc}</p>
-                <h6 className="dblue font-weight-normal mb-3 pt-3">
-                  Development Highlights
-                </h6>
-                <List>
-                  {feature.highlights.map((highlight, key) => (
-                    <li className="text-muted" key={key}>
-                      {highlight}
-                    </li>
-                  ))}
-                </List>
-                <a href={feature.link} className="f-16 dblue dblue-hover bold">
-                  Learn More <span className="right-icon ml-2">&#8594;</span>
-                </a>
-              </div>
-            </Col>
-            <Col md={{ size: 5, offset: 1 }} className="mt-5 mt-sm-0">
-              <div>
-                <a href={feature.link} target="_blank" rel="noreferrer">
-                  <img
-                    src={feature.img}
-                    alt={feature.title}
-                    className="img-fluid d-block mx-auto rounded shadow"
-                    width={393}
-                  />
-                </a>
-              </div>
-            </Col>
-          </Row>
+              </Col>
+              <Col md={{ size: 5, offset: 1 }} className="mt-5 mt-sm-0">
+                <div>
+                  <a href={feature.link} target="_blank" rel="noreferrer">
+                    <img
+                      src={feature.img}
+                      alt={feature.title}
+                      className="img-fluid d-block mx-auto rounded shadow"
+                      width={393}
+                    />
+                  </a>
+                </div>
+              </Col>
+            </Row>
+          </Zoom>
         ) : (
-          <Row
-            key={key}
-            className={`${
-              feature.id === 1
-                ? "align-items-center"
-                : "align-items-center mt-5"
-            }`}
-          >
-            <Col md={5}>
-              <div>
-                <a href={feature.link} target="_blank" rel="noreferrer">
-                  <img
-                    src={feature.img}
-                    alt=""
-                    className="img-fluid shadow rounded d-block mx-auto"
-                    width={393}
-                  />
-                </a>
-              </div>
-            </Col>
-            <Col md={{ size: 6, offset: 1 }}>
-              <div className="mt-5 mt-sm-0 mb-4">
-                <div className="my-4">
-                  <i className={feature.icon}></i>
+          <Zoom right>
+            <Row
+              key={key}
+              className={`${
+                feature.id === 1
+                  ? "align-items-center"
+                  : "align-items-center mt-5"
+              }`}
+            >
+              <Col md={5}>
+                <div>
+                  <a href={feature.link} target="_blank" rel="noreferrer">
+                    <img
+                      src={feature.img}
+                      alt=""
+                      className="img-fluid shadow rounded d-block mx-auto"
+                      width={393}
+                    />
+                  </a>
                 </div>
-                <h5 className="dblue font-weight-normal mb-3 pt-3">
-                  {feature.title}
-                </h5>
-                <p className="text-muted mb-3 f-15">{feature.desc}</p>
-                <h6 className="dblue font-weight-normal mb-3 pt-3">
-                  Development Highlights
-                </h6>
-                <List>
-                  {feature.highlights.map((highlight, key) => (
-                    <li className="text-muted" key={key}>
-                      {highlight}
-                    </li>
-                  ))}
-                </List>
-                <a href={feature.link} className="f-16 dblue dblue-hover bold">
-                  Learn More <span className="right-icon ml-2">&#8594;</span>
-                </a>
-              </div>
-            </Col>
-          </Row>
+              </Col>
+              <Col md={{ size: 6, offset: 1 }}>
+                <div className="mt-5 mt-sm-0 mb-4">
+                  <div className="my-4">
+                    <i className={feature.icon}></i>
+                  </div>
+                  <h5 className="purp fw-bold mb-3 pt-3">{feature.title}</h5>
+                  <p className="text-dark mb-3 f-15">{feature.desc}</p>
+                  <h6 className="lblue fw-bold mb-3 pt-3">
+                    Development Highlights
+                  </h6>
+                  <List>
+                    {feature.highlights.map((highlight, key) => (
+                      <li className="text-dark" key={key}>
+                        {highlight}
+                      </li>
+                    ))}
+                  </List>
+                  <a
+                    href={feature.link}
+                    className="f-16 lblue dblue-hover bold"
+                  >
+                    Learn More <span className="right-icon ml-2">&#8594;</span>
+                  </a>
+                </div>
+              </Col>
+            </Row>
+          </Zoom>
         )
       )}
     </>
@@ -199,7 +210,9 @@ const Projects = () => {
           <Col>
             <div className="title text-left mb-5">
               <h3 className="font-weight-normal text-dark">
-                <span className="dblue text-uppercase">Projects</span>
+                <span className="text-dark fw-bold text-uppercase">
+                  Projects
+                </span>
               </h3>
             </div>
           </Col>

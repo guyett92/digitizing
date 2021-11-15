@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section className="contact-section" id="contact">
       <Container>
-        <h3 className="font-weight-normal dblue">Contact</h3>
+        <h3 className="fw-bold text-uppercase text-dark">Contact</h3>
         <Formik
           initialValues={{
             name: "",
@@ -33,7 +33,7 @@ const Contact = () => {
           }}
         >
           <Form>
-            <label htmlFor="name" className="text-muted">
+            <label htmlFor="name" className="text-dark">
               Name:{" "}
             </label>
             <Input tag={Field} name="name" type="text" component="input" />
@@ -42,7 +42,7 @@ const Contact = () => {
               render={(msg) => <div className="text-danger">{msg}</div>}
             />
             <br />
-            <label htmlFor="email" className="text-muted">
+            <label htmlFor="email" className="text-dark">
               Email:{" "}
             </label>
             <Input tag={Field} name="email" type="email" component="input" />
@@ -51,7 +51,7 @@ const Contact = () => {
               render={(msg) => <div className="text-danger">{msg}</div>}
             />
             <br />
-            <label htmlFor="message" className="text-muted">
+            <label htmlFor="message" className="text-dark">
               Message:{" "}
             </label>
             <Input tag={Field} name="message" component="textarea" />

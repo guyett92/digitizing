@@ -25,7 +25,7 @@ const Footer = () => {
                 href="mailto:tipeake@gmail.com"
                 className="text-dark mt-4 mb-2"
               >
-                tipeake@gmail.com.com
+                tipeake@gmail.com
               </a>
               <br />
               {/* <h6 className="text-muted font-weight-normal">+99 1234-5678-9</h6> */}
@@ -69,7 +69,7 @@ const Footer = () => {
               <Col md={4}>
                 <div className="image-container">
                   <img
-                    src="/images/digitizing.png"
+                    src="/images/new-logo.png"
                     alt="digitizing logo"
                     width={100}
                   />

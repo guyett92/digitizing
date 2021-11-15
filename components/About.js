@@ -7,8 +7,8 @@ const About = () => {
         <Row className="justify-content-center">
           <Col lg={6} md={8}>
             <div className="title text-center mb-5">
-              <h3 className="font-weight-normal dblue">About Us</h3>
-              <p className="text-muted">
+              <h3 className="fw-bold text-uppercase text-dark">About Us</h3>
+              <p className="text-dark">
                 Digitizing Inc is a full-service blockchain development team
                 with offices in New York. Founded in 2021 by longtime crypto
                 enthusiasts, traders and nft collectors, the company is a
