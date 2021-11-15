@@ -24,6 +24,7 @@ a {
   --dblue: #1f5e7a;
   --pred: #c11c6b;
   --purp: #9c248e;
+  --yell: #fcce08;
 }
 
 .lblue {
@@ -121,6 +122,50 @@ a {
   font-size: 1.2rem;
 }
 
-.new-hover:hover {
+.new-hover:hover,
+.footer-link:hover {
   color: #fcce08 !important;
+}
+
+.about-border {
+  border: 1px solid var(--purp);
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(156, 36, 142, 0.25),
+    rgb(252, 206, 8, 0.25)
+  );
+  margin-right: 0.5rem;
+}
+
+.contact-border {
+  background-image: linear-gradient(to right, var(--purp), var(--yell));
+  margin-left: 0.5rem;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.contact-border > div {
+  background-color: white;
+  border-radius: 10px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .about-border {
+    margin-bottom: 5rem;
+    margin-right: initial;
+    min-height: 420px;
+  }
+  .contact-border {
+    margin-left: initial;
+  }
+}
+
+@media (max-width: 575px) {
+  .about-border,
+  .contact-border {
+    max-width: 95%;
+  }
 }

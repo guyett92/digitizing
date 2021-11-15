@@ -39,7 +39,9 @@ const Footer = () => {
                   <ul className="list-unstyled company-sub-menu">
                     {link.child.map((fLink, key) => (
                       <li key={key}>
-                        <a href={fLink.link}>{fLink.title}</a>
+                        <a href={fLink.link} className="footer-link">
+                          {fLink.title}
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -51,16 +53,16 @@ const Footer = () => {
                 <ul className="list-unstyled footer-social-list mt-4">
                   <li className="list-inline-item">
                     <li className="list-inline-item">
-                      <a href="#">
+                      <a href="#" className="footer-link">
                         <BsTwitter />
                       </a>
                     </li>
-                    <a href="#">
+                    <a href="#" className="footer-link">
                       <BsGithub />
                     </a>
                   </li>
                   <li className="list-inline-item">
-                    <a href="#">
+                    <a href="#" className="footer-link">
                       <FaDiscord />
                     </a>
                   </li>

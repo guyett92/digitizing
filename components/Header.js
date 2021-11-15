@@ -48,7 +48,7 @@ const Header = () => {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="text-dark new-hover" href="#contact">
+                <NavLink className="text-dark new-hover" href="#about">
                   Contact
                 </NavLink>
               </NavItem>
