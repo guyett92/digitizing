@@ -1,10 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Input, Button } from "reactstrap";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import styles from "../styles/Hero.module.css";
 import Zoom from "react-reveal";
+import axios from "axios";
 
 const About = () => {
+  const [serverState, setServerState] = useState();
+  const [visible, setVisible] = useState(false);
+  const handleServerResponse = (ok, msg) => {
+    setServerState({ ok, msg });
+  };
+
+  const handleSubmit = (values, actions) => {
+    axios({
+      method: "POST",
+      url: "https://formspree.io/f/xwkagwkd",
+      data: values,
+    })
+      .then((response) => {
+        actions.setSubmitting(false);
+        actions.resetForm();
+        handleServerResponse(true, "Thanks!");
+        setVisible(true);
+        setTimeout(() => {
+          setVisible(false);
+        }, 3000);
+      })
+      .catch((error) => {
+        actions.setSubmitting(false);
+        handleServerResponse(false, error.response.data.error);
+      });
+  };
+
   return (
     <section className="section about-section" id="about">
       <Container>
@@ -39,10 +67,7 @@ const About = () => {
                     email: "",
                     message: "",
                   }}
-                  onSubmit={(values, actions) => {
-                    alert(JSON.stringify(values, null, 2));
-                    actions.setSubmitting(false);
-                  }}
+                  onSubmit={handleSubmit}
                   validate={(values) => {
                     const emailRegex =
                       /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -103,6 +128,11 @@ const About = () => {
                     >
                       Send
                     </Button>
+                    {serverState && visible && (
+                      <p className={!serverState.ok ? "errorMsg fw-bold" : ""}>
+                        {serverState.msg}
+                      </p>
+                    )}
                   </Form>
                 </Formik>
               </div>
