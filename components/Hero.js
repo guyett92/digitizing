@@ -11,7 +11,7 @@ const Hero = () => {
         <Row className={`align-items-center ${styles.bottomClass}`}>
           <Col lg={8} className="align-self-end">
             <div className="pr-lg-5 new-card">
-              <h1 className="mb-4 font-weight-normal text-dark line-height-1_4">
+              <h1 className="mb-4 font-weight-normal nunito-bold text-dark line-height-1_4">
                 digitizing.io
               </h1>
               <p className="text-dark fw-bold mb-4 pb-2">

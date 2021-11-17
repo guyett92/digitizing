@@ -47,9 +47,11 @@ const FeatureBox = (props) => {
                   <div className="my-4">
                     <i className={feature.icon}></i>
                   </div>
-                  <h5 className="purp fw-bold mb-3 pt-3">{feature.title}</h5>
+                  <h5 className="purp nunito-bold mb-3 pt-3">
+                    {feature.title}
+                  </h5>
                   <p className="text-dark mb-3 f-15">{feature.desc}</p>
-                  <h6 className="lblue fw-bold mb-3 pt-3">
+                  <h6 className="lblue nunito-bold mb-3 pt-3">
                     Development Highlights
                   </h6>
                   <List>
@@ -61,7 +63,7 @@ const FeatureBox = (props) => {
                   </List>
                   <a
                     href={feature.link}
-                    className="f-16 lblue dblue-hover bold"
+                    className="f-16 lblue dblue-hover nunito-bold"
                   >
                     Learn More <span className="right-icon ml-2">&#8594;</span>
                   </a>
@@ -77,9 +79,11 @@ const FeatureBox = (props) => {
                   <div className="my-4">
                     <i className="mdi mdi-account-group"></i>
                   </div>
-                  <h5 className="purp fw-bold mb-3 pt-3">{feature.title}</h5>
+                  <h5 className="purp nunito-bold mb-3 pt-3">
+                    {feature.title}
+                  </h5>
                   <p className="text-dark mb-3 f-15">{feature.desc}</p>
-                  <h6 className="lblue fw-bold mb-3 pt-3">
+                  <h6 className="lblue nunito-bold mb-3 pt-3">
                     Development Highlights
                   </h6>
                   <List>
@@ -91,7 +95,7 @@ const FeatureBox = (props) => {
                   </List>
                   <a
                     href={feature.link}
-                    className="f-16 lblue dblue-hover bold"
+                    className="f-16 lblue dblue-hover nunito-bold"
                   >
                     Learn More <span className="right-icon ml-2">&#8594;</span>
                   </a>
@@ -138,9 +142,11 @@ const FeatureBox = (props) => {
                   <div className="my-4">
                     <i className={feature.icon}></i>
                   </div>
-                  <h5 className="purp fw-bold mb-3 pt-3">{feature.title}</h5>
+                  <h5 className="purp nunito-bold mb-3 pt-3">
+                    {feature.title}
+                  </h5>
                   <p className="text-dark mb-3 f-15">{feature.desc}</p>
-                  <h6 className="lblue fw-bold mb-3 pt-3">
+                  <h6 className="lblue  nunito-bold mb-3 pt-3">
                     Development Highlights
                   </h6>
                   <List>
@@ -152,7 +158,7 @@ const FeatureBox = (props) => {
                   </List>
                   <a
                     href={feature.link}
-                    className="f-16 lblue dblue-hover bold"
+                    className="f-16 lblue dblue-hover nunito-bold"
                   >
                     Learn More <span className="right-icon ml-2">&#8594;</span>
                   </a>
@@ -210,7 +216,7 @@ const Projects = () => {
           <Col>
             <div className="title text-left mb-5">
               <h3 className="font-weight-normal text-dark">
-                <span className="text-dark fw-bold text-uppercase">
+                <span className="text-dark nunito-bold text-uppercase">
                   Projects
                 </span>
               </h3>

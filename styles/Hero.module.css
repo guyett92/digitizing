@@ -5,7 +5,7 @@
 
 .gradientBtn {
   background-image: linear-gradient(to right, #9c248e, #fcce08);
-  border: 2px solid #9c248e;
+  border: 1px solid #9c248e;
   transition: 0.5s;
 }
 
@@ -20,21 +20,35 @@
 
 .hero {
   height: 92vh;
-  background-image: url("/images/background-header.png");
+}
+
+.hero::after {
+  content: "";
+  background: url("/images/background-header.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 @media (max-width: 1100px) {
-  .hero {
+  .hero::after {
     background-image: url("/images/mobile-background.png");
     width: 100%;
-  }
-}
-
-@media (max-width: 540px) {
-  .hero {
-    background-position: center top 12rem;
+    background-size: cover;
+    content: "";
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
   }
 }
