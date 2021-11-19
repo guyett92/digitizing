@@ -10,7 +10,7 @@ const Footer = () => {
       child: [
         { title: "Monsters Bash", link: "https://monstersbash.io/" },
         { title: "Meta Champs", link: "https://www.metachamps.xyz/" },
-        { title: "Poopy Exp", link: "https://www.poopyexperiences.io/" },
+        { title: "Klapes", link: "https://www.klapes.io/" },
       ],
     },
   ];
@@ -22,10 +22,10 @@ const Footer = () => {
           <Col lg={4}>
             <div className="mb-4">
               <a
-                href="mailto:tipeake@gmail.com"
-                className="text-dark mt-4 mb-2"
+                href="mailto:info@digitizing.io"
+                className="text-dark mt-4 mb-2 footer-link"
               >
-                tipeake@gmail.com
+                info@digitizing.io
               </a>
               <br />
               {/* <h6 className="text-muted font-weight-normal">+99 1234-5678-9</h6> */}

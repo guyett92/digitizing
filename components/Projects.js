@@ -35,7 +35,7 @@ const FeatureBox = (props) => {
                   <a href={feature.link} target="_blank" rel="noreferrer">
                     <img
                       src={feature.img}
-                      alt=""
+                      alt={feature.title}
                       className="img-fluid shadow rounded d-block mx-auto"
                       width={393}
                     />
@@ -63,6 +63,8 @@ const FeatureBox = (props) => {
                   </List>
                   <a
                     href={feature.link}
+                    target="_blank"
+                    rel="noreferrer"
                     className="f-16 lblue dblue-hover nunito-bold"
                   >
                     Learn More <span className="right-icon ml-2">&#8594;</span>
@@ -95,6 +97,8 @@ const FeatureBox = (props) => {
                   </List>
                   <a
                     href={feature.link}
+                    target="_blank"
+                    rel="noreferrer"
                     className="f-16 lblue dblue-hover nunito-bold"
                   >
                     Learn More <span className="right-icon ml-2">&#8594;</span>
@@ -130,7 +134,7 @@ const FeatureBox = (props) => {
                   <a href={feature.link} target="_blank" rel="noreferrer">
                     <img
                       src={feature.img}
-                      alt=""
+                      alt={feature.title}
                       className="img-fluid shadow rounded d-block mx-auto"
                       width={393}
                     />
@@ -158,6 +162,8 @@ const FeatureBox = (props) => {
                   </List>
                   <a
                     href={feature.link}
+                    target="_blank"
+                    rel="noreferrer"
                     className="f-16 lblue dblue-hover nunito-bold"
                   >
                     Learn More <span className="right-icon ml-2">&#8594;</span>
@@ -197,16 +203,14 @@ const Projects = () => {
     },
     {
       id: 3,
-      img: "./images/poopy.png",
-      title: "Poopy Exp",
-      desc: "The first programmatically generated interactive ERC-721 NFT. Each poopy contains an arcade style game within the NFT who’s attributes (like difficulty rating and map layout) are uniquely generated when minted.",
+      img: "./images/Basic Klape Photo.png",
+      title: "Klapes",
+      desc: "Klapes is a project of 5,000 programatically generated NFTs. The first NFT built and released on the Klaytn blockchain.",
       highlights: [
-        "Programmatic generation",
-        "Interactive reveal allowing user to uncover their design for the first time - a first for NFT collections",
-        "One of a kind generated arcade style game contained within the NFT",
-        "Even more blockchain smart contract development",
+        "Klaytn blockchain smart contract development",
+        "Programmatic generation of each unique image",
       ],
-      link: "https://www.poopyexperiences.io/",
+      link: "https://www.klapes.io/",
     },
   ];
   return (
