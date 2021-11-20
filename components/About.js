@@ -34,7 +34,7 @@ const About = () => {
   };
 
   return (
-    <section className="section about-section" id="about">
+    <section className="section about-section">
       <Container>
         <Row className="justify-content-center mb-5">
           <Col md={6} className="about-border">

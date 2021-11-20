@@ -5,7 +5,7 @@
 
 .gradientBtn {
   background-image: linear-gradient(to right, #9c248e, #fcce08);
-  border: 1px solid #9c248e;
+  border: 2px solid #9c248e;
   transition: 0.5s;
 }
 

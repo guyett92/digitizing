@@ -21,9 +21,8 @@ const FeatureBox = (props) => {
     <>
       {props.features.map((feature, key) =>
         feature.id % 2 !== 0 ? (
-          <Zoom left>
+          <Zoom left key={key}>
             <Row
-              key={key}
               className={`${
                 feature.id === 1
                   ? "align-items-center"
@@ -74,8 +73,8 @@ const FeatureBox = (props) => {
             </Row>
           </Zoom>
         ) : !reorder ? (
-          <Zoom right>
-            <Row key={key} className="align-items-center mt-5">
+          <Zoom right key={key}>
+            <Row className="align-items-center mt-5">
               <Col md={6}>
                 <div className="mb-4">
                   <div className="my-4">
@@ -120,9 +119,8 @@ const FeatureBox = (props) => {
             </Row>
           </Zoom>
         ) : (
-          <Zoom right>
+          <Zoom right key={key}>
             <Row
-              key={key}
               className={`${
                 feature.id === 1
                   ? "align-items-center"
@@ -214,7 +212,7 @@ const Projects = () => {
     },
   ];
   return (
-    <section className="section" id="projects">
+    <section className="section">
       <Container>
         <Row className="justify-content-center">
           <Col>
@@ -228,6 +226,7 @@ const Projects = () => {
           </Col>
         </Row>
         <FeatureBox features={features} />
+        <div id="about"></div>
       </Container>
     </section>
   );

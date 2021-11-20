@@ -134,7 +134,7 @@ a {
 }
 
 .about-border {
-  border: 1px solid var(--purp);
+  border: 2px solid var(--purp);
   border-radius: 10px;
   background-image: linear-gradient(
     to bottom right,

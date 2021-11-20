@@ -32,6 +32,7 @@ const Hero = () => {
               </div> */}
               <a
                 href="#about"
+                id="projects"
                 className={`btn text-light fw-bold ${styles.gradientBtn}`}
               >
                 Contact Now <span className="ml-2 right-icon">&#8594;</span>

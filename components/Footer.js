@@ -51,7 +51,7 @@ const Footer = () => {
               <Col md={4}>
                 <h6 className="text-dark mb-3">Socials</h6>
                 <ul className="list-unstyled footer-social-list mt-4">
-                  <li className="list-inline-item">
+                  <div className="list-inline-item">
                     <li className="list-inline-item">
                       <a href="#" className="footer-link">
                         <BsTwitter />
@@ -60,7 +60,7 @@ const Footer = () => {
                     <a href="#" className="footer-link">
                       <BsGithub />
                     </a>
-                  </li>
+                  </div>
                   <li className="list-inline-item">
                     <a href="#" className="footer-link">
                       <FaDiscord />
